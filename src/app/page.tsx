@@ -58,7 +58,7 @@ export default function Portfolio() {
       description:
         "An AI-powered healthcare application that uses machine learning algorithms to detect and predict stunting in infants. Features include growth tracking, nutritional analysis, and early intervention recommendations for healthcare professionals.",
       image: "/placeholder/Thumbnail Portofolio.png",
-      tags: ["React","JavaScript","HTML","CSS","Next.js","Web Design","Agile","Community Service"],
+      tags: ["Python", "Machine Learning", "TensorFlow", "React", "Healthcare AI"],
       slug: "infants-stunting-detection",
     },
   ]
@@ -159,14 +159,14 @@ export default function Portfolio() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
                 <p className="font-body text-lg text-muted-foreground mb-6 leading-relaxed">
-                  Hello! I'm Muhammad Zaki Anggoro, a passionate frontend developer with a keen eye for detail and a
-                  love for crafting beautiful, functional web applications. With a background in computer science and a
-                  focus on modern web technologies, I specialize in creating responsive, user-friendly interfaces that
-                  enhance the overall user experience. I've been working in web development for a years and keep
+                  Hello! I&apos;m Muhammad Zaki Anggoro, a passionate frontend developer with a keen eye for detail and
+                  a love for crafting beautiful, functional web applications. With a background in computer science and
+                  a focus on modern web technologies, I specialize in creating responsive, user-friendly interfaces that
+                  enhance the overall user experience. I&apos;ve been working in web development for a years and keep
                   studying to stay updated with the latest trends and best practices in the industry.
                 </p>
                 <div className="flex flex-wrap gap-3">
-                  {["React", "Next.js", "TypeScript", "Tailwind CSS", "Figma"].map((skill) => (
+                  {["React", "Next.js", "TypeScript", "Node.js", "Tailwind CSS", "Figma"].map((skill) => (
                     <Badge key={skill} variant="secondary" className="font-body px-3 py-1">
                       {skill}
                     </Badge>
@@ -199,6 +199,9 @@ export default function Portfolio() {
         <div className="max-w-6xl mx-auto">
           <div className="animate-fade-in-up">
             <h2 className="font-heading font-black text-3xl sm:text-4xl text-center mb-4">Featured Projects</h2>
+            <p className="font-body text-lg text-muted-foreground text-center mb-16 max-w-2xl mx-auto">
+              My featured project showcasing expertise in healthcare technology and AI-driven solutions.
+            </p>
 
             <div className="grid md:grid-cols-1 lg:grid-cols-1 gap-8 max-w-2xl mx-auto">
               {projects.map((project, index) => (
@@ -206,11 +209,11 @@ export default function Portfolio() {
                   key={index}
                   className="group overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
                 >
-                  <div className="aspect-[5/2.5] overflow-hidden bg-muted/20">
+                  <div className="h-64 overflow-hidden bg-muted/20 p-4">
                     <img
                       src={project.image || "/placeholder.svg?height=400&width=600&query=project thumbnail"}
                       alt={project.title}
-                      className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
+                      className="w-full h-full object-contain rounded-lg group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>
                   <CardContent className="p-6">
@@ -239,14 +242,14 @@ export default function Portfolio() {
         </div>
       </section>
 
-{/* Contact Section */}
+      {/* Contact Section */}
       <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30">
         <div className="max-w-4xl mx-auto text-center">
           <div className="animate-fade-in-up">
-            <h2 className="font-heading font-black text-3xl sm:text-4xl mb-6">Let's Work Together</h2>
+            <h2 className="font-heading font-black text-3xl sm:text-4xl mb-6">Let&apos;s Work Together</h2>
             <p className="font-body text-lg text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed">
-              I'm always interested in new opportunities and exciting projects. Let's discuss how we can bring your
-              ideas to life.
+              I&apos;m always interested in new opportunities and exciting projects. Let&apos;s discuss how we can bring
+              your ideas to life.
             </p>
 
             <div className="flex justify-center space-x-6 mb-12">
