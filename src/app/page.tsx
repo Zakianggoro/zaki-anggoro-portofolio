@@ -56,7 +56,7 @@ export default function Portfolio() {
     {
       title: "Infant Stunting Detection System",
       description:
-        "An AI-powered healthcare application that uses machine learning algorithms to detect and predict stunting in infants. Features include growth tracking, nutritional analysis, and early intervention recommendations for healthcare professionals.",
+        "This tool was created to empower local health workers (posyandu) by providing a simple yet intelligent platform that uses basic input data—such as age, height, weight, and growth history—to generate quick, preliminary assessments for identifying children at risk of malnutrition or growth issues.",
       image: "/placeholder/Thumbnail Portofolio.png",
       tags: ["Python", "Machine Learning", "TensorFlow", "React", "Healthcare AI"],
       slug: "infants-stunting-detection",
