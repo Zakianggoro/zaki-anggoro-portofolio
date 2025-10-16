@@ -137,11 +137,6 @@ export default function Home() {
         output.push('GitHub: github.com/Zakianggoro')
         output.push('LinkedIn: linkedin.com/in/muhammad-zaki-anggoro')
         output.push('Email: mzakianggoro324@gmail.com')
-      } else if (input === 'easter' || input === 'git commit -m "found the easter egg"') {
-        setEasterEgg(true)
-        output.push('🎉 EASTER EGG FOUND! 🎉')
-        output.push('[main] commit abc123def "found the easter egg"')
-        output.push('You\'ve unlocked a secret achievement!')
       } else if (input === 'clear') {
         setTerminalOutput([])
         setTerminalInput('')
