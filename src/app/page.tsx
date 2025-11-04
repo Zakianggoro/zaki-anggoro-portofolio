@@ -48,7 +48,7 @@ export default function Home() {
   const handleTerminalCommand = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter') {
       const input = terminalInput.toLowerCase().trim()
-      let output = [...terminalOutput, `$ ${terminalInput}`]
+      const output = [...terminalOutput, `$ ${terminalInput}`]
 
       if (input === 'help') {
         output.push('Available commands:')
