@@ -1,8 +1,9 @@
 'use client'
 
 import { useState } from 'react'
-import { Github, Star, Eye, GitBranch, Code2, Copy, Check, Terminal, Zap, Trophy } from 'lucide-react'
+import { Github, Star, Eye, GitBranch, Code2, Copy, Check, Terminal, Trophy } from 'lucide-react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 const LANGUAGES = {
   JS: { color: 'bg-yellow-500', label: 'JavaScript', icon: '📘' },
@@ -26,73 +27,13 @@ const PROJECTS = [
     watchers: 23,
     forks: 12,
     mainLanguage: 'Python',
-    topics: ['healthcare', 'machine-learning', 'tensorflow', 'react'],
-  },
-  {
-    id: 2,
-    name: 'portfolio-website',
-    title: 'Interactive Portfolio',
-    description: 'Modern, responsive portfolio website with dark mode support and smooth animations.',
-    languages: ['TS', 'JS'],
-    stars: 28,
-    watchers: 15,
-    forks: 8,
-    mainLanguage: 'TS',
-    topics: ['portfolio', 'nextjs', 'tailwind', 'react'],
-  },
-  {
-    id: 3,
-    name: 'e-commerce-platform',
-    title: 'E-Commerce Platform',
-    description: 'Full-stack e-commerce solution with payment integration and inventory management.',
-    languages: ['TS', 'Java', 'Ruby'],
-    stars: 67,
-    watchers: 34,
-    forks: 19,
-    mainLanguage: 'TS',
-    topics: ['ecommerce', 'fullstack', 'nodejs', 'stripe'],
-  },
-  {
-    id: 4,
-    name: 'mobile-fitness-app',
-    title: 'Mobile Fitness Tracker',
-    description: 'Cross-platform fitness tracking app with workout logging and progress analytics.',
-    languages: ['Flutter', 'Dart'],
-    stars: 89,
-    watchers: 56,
-    forks: 34,
-    mainLanguage: 'Flutter',
-    topics: ['flutter', 'fitness', 'mobile', 'cross-platform'],
-  },
-  {
-    id: 5,
-    name: 'game-2d-platformer',
-    title: '2D Platformer Game',
-    description: 'Engaging 2D platformer with pixel-perfect controls and challenging levels.',
-    languages: ['CSharp', 'JS'],
-    stars: 52,
-    watchers: 29,
-    forks: 15,
-    mainLanguage: 'CSharp',
-    topics: ['gamedev', 'unity', 'csharp', '2d'],
-  },
-  {
-    id: 6,
-    name: 'cli-task-manager',
-    title: 'CLI Task Manager',
-    description: 'Command-line task management tool with persistent storage and beautiful terminal UI.',
-    languages: ['Python', 'JS'],
-    stars: 34,
-    watchers: 18,
-    forks: 7,
-    mainLanguage: 'Python',
-    topics: ['cli', 'python', 'productivity', 'terminal'],
-  }
+    secLanguage: 'JavaScript',
+    topics: ['healthcare', 'machine-learning', 'react'],
+  } 
 ]
 
 export default function Home() {
   const [copied, setCopied] = useState(false)
-  const [easterEgg, setEasterEgg] = useState(false)
   const [terminalInput, setTerminalInput] = useState('')
   const [terminalOutput, setTerminalOutput] = useState([
     'Welcome to Muhammad Zaki\'s GitHub 🎮',
@@ -117,7 +58,6 @@ export default function Home() {
         output.push('  skills            - List my skills')
         output.push('  projects          - List all projects')
         output.push('  social            - Show social links')
-        output.push('  easter            - Find the easter egg')
         output.push('  clear             - Clear terminal')
       } else if (input === 'whoami') {
         output.push('Muhammad Zaki Anggoro')
@@ -186,10 +126,11 @@ export default function Home() {
             <div className="grid grid-cols-3 gap-8 items-start">
               <div className="col-span-1 flex justify-center">
                 <div className="w-48 h-48 rounded-lg overflow-hidden border-2 border-gray-700 hover:border-blue-500 transition shadow-lg">
-                  <img 
-                    src="/placeholder/Profile Picture.jpg" 
-                    alt="Muhammad Zaki Anggoro" 
+                  <image 
+                    href="/placeholder/Profile Picture.jpg"
                     className="w-full h-full object-cover"
+                    width="100%"
+                    height="100%"
                   />
                 </div>
               </div>
@@ -244,7 +185,7 @@ export default function Home() {
                 </div>
                 <div>
                   <p className="text-gray-300 text-sm font-semibold mb-2">Backend Development</p>
-                  <p className="text-gray-400 text-sm">Node.js, Express, Python, Django, REST APIs, Databases</p>
+                  <p className="text-gray-400 text-sm">Node.js, Express, Python, Django, REST APIs,Fast API ,yyDatabases</p>
                 </div>
                 <div>
                   <p className="text-gray-300 text-sm font-semibold mb-2">Mobile Development</p>
@@ -256,7 +197,7 @@ export default function Home() {
                 </div>
                 <div>
                   <p className="text-gray-300 text-sm font-semibold mb-2">AI & Machine Learning</p>
-                  <p className="text-gray-400 text-sm">TensorFlow, Python, Healthcare AI, Data Analysis</p>
+                  <p className="text-gray-400 text-sm">Python, Healthcare AI, Data Analysis</p>
                 </div>
               </div>
             </div>
@@ -380,13 +321,12 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Terminal Easter Egg */}
+        {/* Terminal*/}
         <section id="terminal" className="mb-12">
           <h2 className="text-2xl font-bold text-white mb-4">Interactive Terminal</h2>
           <div className="bg-gray-950 border border-gray-700 rounded-lg overflow-hidden font-mono">
             <div className="bg-gray-800 px-4 py-2 flex items-center justify-between border-b border-gray-700">
               <span className="text-sm text-gray-400">terminal</span>
-              {easterEgg && <span className="text-sm text-green-400 animate-pulse">🎉 EASTER EGG UNLOCKED!</span>}
             </div>
             <div className="p-4 h-96 overflow-y-auto bg-gray-950">
               {terminalOutput.map((line, i) => (
@@ -395,8 +335,6 @@ export default function Home() {
                     <span className="text-green-400">{line}</span>
                   ) : line.includes('error') ? (
                     <span className="text-red-400">{line}</span>
-                  ) : line.includes('EASTER EGG') || line.includes('🎉') ? (
-                    <span className="text-yellow-400 font-bold">{line}</span>
                   ) : (
                     line
                   )}
@@ -416,7 +354,6 @@ export default function Home() {
               />
             </div>
           </div>
-          <p className="text-gray-400 text-xs mt-2">💡 Hint: Try typing "easter" in the terminal for a surprise!</p>
         </section>
 
         {/* Contact Section */}
