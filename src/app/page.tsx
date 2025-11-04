@@ -45,7 +45,7 @@ export default function Home() {
     setTimeout(() => setCopied(false), 2000)
   }
 
-  const handleTerminalCommand = (e) => {
+  const handleTerminalCommand = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter') {
       const input = terminalInput.toLowerCase().trim()
       const output = [...terminalOutput, `$ ${terminalInput}`]
@@ -297,7 +297,7 @@ export default function Home() {
           <h2 className="text-xl sm:text-2xl font-bold text-white mb-4 sm:mb-6">Recent Repositories</h2>
           <div className="grid grid-cols-1 gap-4">
             {PROJECTS.map((project) => {
-              const mainLangData = LANGUAGES[project.mainLanguage]
+              const mainLangData = LANGUAGES[project.mainLanguage as keyof typeof LANGUAGES]
               return (
                 <div
                   key={project.id}
