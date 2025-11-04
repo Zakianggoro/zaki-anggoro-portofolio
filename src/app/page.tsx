@@ -5,14 +5,14 @@ import { Github, Star, Eye, GitBranch, Code2, Copy, Check, Terminal, Trophy } fr
 import Link from 'next/link'
 
 const LANGUAGES = {
-  JS: { color: 'bg-yellow-500', label: 'JavaScript', icon: '📘' },
-  Python: { color: 'bg-blue-500', label: 'Python', icon: '🐍' },
-  Java: { color: 'bg-orange-600', label: 'Java', icon: '☕' },
-  PHP: { color: 'bg-indigo-600', label: 'PHP', icon: '🐘' },
-  TS: { color: 'bg-blue-600', label: 'TypeScript', icon: '📗' },
-  Flutter: { color: 'bg-blue-400', label: 'Flutter', icon: '🦋' },
-  Ruby: { color: 'bg-red-600', label: 'Ruby', icon: '💎' },
-  CSharp: { color: 'bg-purple-600', label: 'C#', icon: '⚫' },
+  JS: { color: 'bg-yellow-500', label: 'JavaScript', icon: '' },
+  Python: { color: 'bg-blue-500', label: 'Python', icon: '' },
+  Java: { color: 'bg-orange-600', label: 'Java', icon: '' },
+  PHP: { color: 'bg-indigo-600', label: 'PHP', icon: '' },
+  TS: { color: 'bg-blue-600', label: 'TypeScript', icon: '' },
+  Flutter: { color: 'bg-blue-400', label: 'Flutter', icon: '' },
+  Ruby: { color: 'bg-red-600', label: 'Ruby', icon: '' },
+  CSharp: { color: 'bg-purple-600', label: 'C#', icon: '' },
 }
 
 const PROJECTS = [
@@ -150,9 +150,9 @@ export default function Home() {
                 </div>
 
                 <div className="space-y-3 mb-6">
-                  <p className="text-gray-400 text-sm"><span className="text-gray-500">📍 Location:</span> Jakarta, Indonesia</p>
-                  <p className="text-gray-400 text-sm"><span className="text-gray-500">💼 Status:</span> Open to opportunities</p>
-                  <p className="text-gray-400 text-sm"><span className="text-gray-500">⚡ Focus:</span> Full-stack development & Game design</p>
+                  <p className="text-gray-400 text-sm"><span className="text-gray-500">Location:</span> Jakarta, Indonesia</p>
+                  <p className="text-gray-400 text-sm"><span className="text-gray-500">Status:</span> Open to opportunities</p>
+                  <p className="text-gray-400 text-sm"><span className="text-gray-500">Focus:</span> Full-stack development & Game design</p>
                 </div>
 
                 <div className="flex flex-wrap gap-2">
@@ -235,27 +235,27 @@ export default function Home() {
             <div className="space-y-6">
               <div className="border-l-2 border-blue-500 pl-4">
                 <div className="flex justify-between items-start mb-1">
-                  <h4 className="text-white font-semibold">Senior Full-Stack Developer</h4>
-                  <span className="text-gray-400 text-xs">2023 - Present</span>
+                  <h4 className="text-white font-semibold">Laboratory Asissistant of Object Oriented Programming</h4>
+                  <span className="text-gray-400 text-xs">Jan 2025 - May 2025</span>
                 </div>
-                <p className="text-blue-400 text-sm mb-1">Tech Innovations Inc.</p>
-                <p className="text-gray-400 text-sm">Led development of high-performance web applications, mentored team of 5 developers, improved application performance by 40%</p>
+                <p className="text-blue-400 text-sm mb-1">University of Brawijaya</p>
+                <p className="text-gray-400 text-sm">Assisted the teaching team in a university laboratory to support and guide fellow college students in understanding course materials and practical sessions. Teaching around 30 college student.</p>
               </div>
               <div className="border-l-2 border-purple-500 pl-4">
                 <div className="flex justify-between items-start mb-1">
-                  <h4 className="text-white font-semibold">Full-Stack Developer</h4>
-                  <span className="text-gray-400 text-xs">2021 - 2023</span>
+                  <h4 className="text-white font-semibold">Staff Quality Control of PKKMB and Startup Academy</h4>
+                  <span className="text-gray-400 text-xs">May 2024 - Mar 2025</span>
                 </div>
-                <p className="text-purple-400 text-sm mb-1">Digital Solutions Ltd.</p>
+                <p className="text-purple-400 text-sm mb-1">University of Brawijaya</p>
                 <p className="text-gray-400 text-sm">Developed full-stack applications using React and Node.js, implemented AI healthcare system, collaborated with cross-functional teams</p>
               </div>
               <div className="border-l-2 border-green-500 pl-4">
                 <div className="flex justify-between items-start mb-1">
-                  <h4 className="text-white font-semibold">Junior Developer</h4>
-                  <span className="text-gray-400 text-xs">2020 - 2021</span>
+                  <h4 className="text-white font-semibold">Game Developer</h4>
+                  <span className="text-gray-400 text-xs">Apr 2025 - Present</span>
                 </div>
-                <p className="text-green-400 text-sm mb-1">StartUp Hub Jakarta</p>
-                <p className="text-gray-400 text-sm">Built responsive web interfaces, learned agile development, contributed to 3+ production projects</p>
+                <p className="text-green-400 text-sm mb-1">Raion Community</p>
+                <p className="text-gray-400 text-sm">Game Programmer at Raion Community, focusing on collaborative game development and continuous skill improvement.</p>
               </div>
             </div>
           </div>
@@ -270,7 +270,8 @@ export default function Home() {
               return (
                 <Link
                   key={project.id}
-                  href={`/projects/project${project.id}`}
+                  //href={`/projects/project${project.id}`}
+                  href={`/}`}
                   className="bg-gray-900 border border-gray-700 rounded-lg p-6 hover:border-gray-500 hover:bg-gray-900/80 transition text-left block"
                 >
                   <div className="flex items-start justify-between mb-4">
