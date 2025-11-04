@@ -3,7 +3,6 @@
 import { useState } from 'react'
 import { Github, Star, Eye, GitBranch, Code2, Copy, Check, Terminal, Trophy } from 'lucide-react'
 import Link from 'next/link'
-import Image from 'next/image'
 
 const LANGUAGES = {
   JS: { color: 'bg-yellow-500', label: 'JavaScript', icon: '📘' },
@@ -126,11 +125,10 @@ export default function Home() {
             <div className="grid grid-cols-3 gap-8 items-start">
               <div className="col-span-1 flex justify-center">
                 <div className="w-48 h-48 rounded-lg overflow-hidden border-2 border-gray-700 hover:border-blue-500 transition shadow-lg">
-                  <image 
-                    href="/placeholder/Profile Picture.jpg"
+                  <img 
+                    src="/placeholder/Profile Picture.jpg" 
+                    alt="Muhammad Zaki Anggoro" 
                     className="w-full h-full object-cover"
-                    width="100%"
-                    height="100%"
                   />
                 </div>
               </div>
