@@ -404,7 +404,7 @@ export default function Home() {
       {/* Footer */}
       <footer className="border-t border-gray-700 bg-gray-900/50 mt-8 sm:mt-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 sm:py-6 text-center text-gray-400 text-xs sm:text-sm">
-          <p>© 2025 Muhammad Zaki Anggoro • Designed & Built with ❤️</p>
+          <p>© 2025 Muhammad Zaki Anggoro</p>
         </div>
       </footer>
     </div>
