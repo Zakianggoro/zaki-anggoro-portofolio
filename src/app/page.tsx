@@ -151,9 +151,11 @@ export default function Home() {
               {/* Profile Image */}
               <div className="col-span-1 flex justify-center lg:justify-start">
                 <div className="w-40 h-40 sm:w-48 sm:h-48 rounded-lg overflow-hidden border-2 border-gray-700 hover:border-blue-500 transition shadow-lg">
-                  <div className="w-full h-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white text-4xl sm:text-5xl font-bold">
-                    MZ
-                  </div>
+                  <img 
+                    src="/placeholder/Profile Picture.jpg" 
+                    alt="Muhammad Zaki Anggoro" 
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </div>
 
